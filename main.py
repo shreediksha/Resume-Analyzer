@@ -13,6 +13,7 @@ def extract_text_pdf(file_path):
             text += page.extract_text()
     return text
 
+
 def extract_text_docs(file_path):
     return docx2txt.process(file_path)
 
@@ -20,6 +21,7 @@ def extract_text_txt(file_path):
     with open(file_path,'r',encoding='utf-8') as file:
         return file.read()
     
+
 
 def extract_text(file_path):
     if file_path.endswith('.pdf'):
